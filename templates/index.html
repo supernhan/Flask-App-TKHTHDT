@@ -1,0 +1,62 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+    <title>Full Contract Data</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='ppc-logo.png') }}" alt="Top Logo" class="ppc-logo">
+    </header>
+    <h1>Full Contract Data</h1>
+
+    <a href="{{ url_for('add_contract') }} " class="add-button">Thêm hợp đồng</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Contract Code</th>
+                <th>Customer Name</th>
+                <th>Year of Birth</th>
+                <th>SSN</th>
+                <th>Customer Address</th>
+                <th>Mobile</th>
+                <th>Property ID</th>
+                <th>Date of Contract</th>
+                <th>Price</th>
+                <th>Deposit</th>
+                <th>Remain</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contract in contracts %}
+                <tr>
+                    <td>{{ contract.id }}</td>
+                    <td>{{ contract.full_contract_code }}</td>
+                    <td>{{ contract.customer_name }}</td>
+                    <td>{{ contract.year_of_birth }}</td>
+                    <td>{{ contract.ssn }}</td>
+                    <td>{{ contract.customer_address }}</td>
+                    <td>{{ contract.mobile }}</td>
+                    <td>{{ contract.property_id }}</td>
+                    <td>{{ contract.date_of_contract }}</td>
+                    <td>{{ contract.price }}</td>
+                    <td>{{ contract.deposit }}</td>
+                    <td>{{ contract.remain }}</td>
+                    <td>{{ contract.status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy;Copyright by DigitalDreams</p>
+        <img src="{{ url_for('static', filename='logo-team.jpg') }}" alt="Logo" class="logo">
+    </footer>
+</body>
+</html>

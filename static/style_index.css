@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: 150px; 
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0; /* Dòng ngăn cách giữa tiêu đề và nút "Thêm hợp đồng" */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.add-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px; /* Set the desired height */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Ensure the footer is on top */
+}
+
+
+.logo {
+    max-width: 70px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Adjust margin as needed */
+}
